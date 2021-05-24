@@ -1,0 +1,29 @@
+{
+    "run": {
+        "sample": {
+            "members": [
+                {
+                    "features_conf_key": "v1_0_1",
+                    "model_flag": "lgbm_multi"
+                }
+            ],
+            "stacking_key": "single"
+        }
+    },
+    "features": {
+        "nothing": [],
+        "v1_0_1": [
+            {
+                "feature_gen_flag": "basic"
+            }
+        ]
+    },
+    "stacking": {
+        "single": [],
+        "linear": [
+            [
+                "linear_multi"
+            ]
+        ]
+    }
+}
