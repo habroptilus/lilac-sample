@@ -4,10 +4,16 @@
             "members": [
                 {
                     "features_conf_key": "v1_0_1",
-                    "model_flag": "lgbm_multi"
+                    "model_flag": "lgbm_multi",
+                    "seed": 42
+                },
+                {
+                    "features_conf_key": "v1_0_1",
+                    "model_flag": "lgbm_multi",
+                    "seed": 1234
                 }
             ],
-            "stacking_key": "single"
+            "stacking_key": "average"
         }
     },
     "features": {
@@ -19,11 +25,24 @@
         ]
     },
     "stacking": {
-        "single": [],
-        "linear": [
-            [
-                "linear_multi"
-            ]
-        ]
+        "single": {
+            "layers": []
+        },
+        "linear": {
+            "layers": [
+                [
+                    "lr_multi"
+                ]
+            ],
+            "params": {}
+        },
+        "average": {
+            "layers": [
+                [
+                    "avg_multi"
+                ]
+            ],
+            "params": {}
+        }
     }
 }
